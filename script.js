@@ -22,7 +22,9 @@ const students = [
 ]
 
 
-function averageStudentMark(i) {
+
+
+function getAverageStudentMark(i) {
     let marksLenght = 0;
     let sumStudentMarks = students[i].marks.reduce((sum, item) => (sum + item));
     marksLenght = students[i].marks.length;
@@ -31,7 +33,7 @@ function averageStudentMark(i) {
     )
 }
 
-function averageGroupMark(students) {
+function getAverageGroupMark(students) {
     let sum = 0;
     let allmarksLenght = 0;
     students.forEach((Student) => (allmarksLenght += Student.marks.length))
@@ -39,6 +41,5 @@ function averageGroupMark(students) {
     return sum / allmarksLenght;
 }
 
-const averageGroup = averageGroupMark(students);
-const averageMark = averageStudentMark(2);
-
+const averageGroup = getAverageGroupMark(students);
+const averageMark = getAverageStudentMark(2);
